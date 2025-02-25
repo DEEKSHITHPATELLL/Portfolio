@@ -1,0 +1,142 @@
+.projects-section {
+  padding: 80px 20px;
+  width: 100%;
+  background-color: #fff;
+  min-height: 100vh;  
+  display: flex;
+  align-items: center;
+}
+.projects-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;  
+    gap: 2rem;  
+}
+  
+
+.projects-title {
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+.project-card {
+    width: 100%;  
+    max-width: 500px; 
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem; 
+  }
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+.project-image {
+    width: 100%;
+    height: 300px; 
+    object-fit: cover;
+  }
+  
+
+.project-content {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.project-description {
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-tag {
+  padding: 0.3rem 0.8rem;
+  background-color: #f8f9fa;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.project-link {
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-align: center;
+  flex: 1;
+}
+
+.live-link {
+  background-color: #007bff;
+  color: white;
+}
+
+.live-link:hover {
+  background-color: #0056b3;
+}
+
+.code-link {
+  border: 1px solid #007bff;
+  color: #007bff;
+}
+
+.code-link:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 60px 20px;
+  }
+  
+  .project-card {
+    max-width: 20%;
+  }
+  
+  .project-links {
+    flex-direction: column;
+  }
+}
