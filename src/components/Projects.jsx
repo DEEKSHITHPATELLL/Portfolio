@@ -52,8 +52,7 @@ function Projects() {
   return (
     <section className="projects-section" id="projects">
       <div className="projects-container">
-        <h2 className="section-title">My Projects</h2>
-        <p className="section-subtitle">Here are some of my recent works</p>
+        <h1 className="section-title">My Projects</h1>
         <div className="projects-grid">
           {projects.map((project, index) => (
             <ProjectCard key={index} project={project} />

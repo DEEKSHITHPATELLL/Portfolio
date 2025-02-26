@@ -10,7 +10,9 @@ const Contact = () => {
     email: '',
     message: '',
   });
-  
+
+  const [submitted, setSubmitted] = useState(false);
+
   const [ref, inView] = useInView({
     threshold: 0.3,
     triggerOnce: true,
@@ -18,7 +20,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    setSubmitted(true);
   };
 
   const handleChange = (e) => {
@@ -31,7 +33,7 @@ const Contact = () => {
   const socialLinks = [
     { icon: FaGithub, url: 'https://github.com/DEEKSHITHPATELLL/', label: 'GitHub' },
     { icon: FaLinkedin, url: 'https://linkedin.com/in/deekshith-patel-2b1b4a1b9/', label: 'LinkedIn' },
-    { icon: FaTwitter, url: ' https://x.com/deekshith040505?t=vF54MNBEgeu3bxoaWwULBA&s=08 ', label: 'Twitter' },
+    { icon: FaTwitter, url: 'https://x.com/deekshith040505?t=vF54MNBEgeu3bxoaWwULBA&s=08', label: 'Twitter' },
     { icon: FaEnvelope, url: 'mailto:deekshithpatelll560@gmail.com', label: 'Email' },
   ];
 
@@ -46,7 +48,7 @@ const Contact = () => {
         >
           <h2 className="contact-title">Get in Touch</h2>
           <p className="contact-text">
-            I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+            I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
           </p>
 
           <div className="social-links">
@@ -73,54 +75,66 @@ const Contact = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="contact-form"
         >
-          <form onSubmit={handleSubmit}>
-            <div className="form-group">
-              <label htmlFor="name" className="form-label">Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                className="form-input"
-              />
-            </div>
+          {!submitted ? (
+            <form onSubmit={handleSubmit}>
+              <div className="form-group">
+                <label htmlFor="name" className="form-label">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className="form-input"
+                />
+              </div>
 
-            <div className="form-group">
-              <label htmlFor="email" className="form-label">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="form-input"
-              />
-            </div>
+              <div className="form-group">
+                <label htmlFor="email" className="form-label">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="form-input"
+                />
+              </div>
 
-            <div className="form-group">
-              <label htmlFor="message" className="form-label">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                required
-                className="form-input form-textarea"
-              />
-            </div>
+              <div className="form-group">
+                <label htmlFor="message" className="form-label">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  className="form-input form-textarea"
+                />
+              </div>
 
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              type="submit"
-              className="submit-button"
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                type="submit"
+                className="submit-button"
+              >
+                Send Message
+              </motion.button>
+            </form>
+          ) : (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              className="success-message"
             >
-              Send Message
-            </motion.button>
-          </form>
+              <h3>We have received your message.</h3>
+              <p>Soon, we will meet you!</p>
+            </motion.div>
+          )}
         </motion.div>
       </div>
     </section>

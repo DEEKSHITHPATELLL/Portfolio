@@ -45,7 +45,6 @@ function FloatingText() {
         anchorX="center"
         anchorY="middle"
       >
-        Portfolio
       </Text>
     </group>
   );

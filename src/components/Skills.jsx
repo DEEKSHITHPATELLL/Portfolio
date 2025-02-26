@@ -72,18 +72,6 @@ const Skills = () => {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="other-skills"
         >
-          <h3 className="other-skills-title">Other Skills & Tools</h3>
-          <div className="skills-tags">
-            {['Git', 'Docker', 'AWS', 'Firebase', 'MongoDB', 'Redux'].map((tool) => (
-              <motion.span 
-                key={tool}
-                whileHover={{ scale: 1.1 }}
-                className="skill-tag"
-              >
-                {tool}
-              </motion.span>
-            ))}
-          </div>
         </motion.div>
       </div>
     </section>

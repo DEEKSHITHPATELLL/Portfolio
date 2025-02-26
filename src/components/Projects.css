@@ -1,7 +1,7 @@
 .projects-section {
   padding: 80px 20px;
   width: 100%;
-  background-color: #fff;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
   min-height: 100vh;  
   display: flex;
   align-items: center;
