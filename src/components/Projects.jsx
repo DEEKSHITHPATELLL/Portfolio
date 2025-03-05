@@ -6,13 +6,14 @@ const projects = [
     title: "Innovate",
     description: "Innovate is a platform connecting startupers, funders, and insight seekers.Through this application Startupers can showcase ideas, analyze success rates, and attract investors. Funders can explore ideas of startupers and connect for potential investments, while insight seekers access market trends. A secure database and AI assistant enhance collaboration and data-driven decisions.",
     technologies: ["React", "Node.js", "Express", "MongoDB"],
+    link: "https://drive.google.com/file/d/1jutTpiNxcnBKTKbnBWb8GSrNqPASlIth/view?usp=drivesdk",
     github: "https://github.com/DEEKSHITHPATELLL/Innovate.git"
   },
   {
     title: "Food Donation Management System",
     description: "Food Donation Management is a web application connecting food donors and NGOs to reduce waste and support community welfare. Donors can list surplus food, while NGOs receive real-time notifications and assign nearby teams for collection. A built-in map improves coordination, and all data is securely stored in Database, ensuring traceability and efficient food distribution.",
     technologies: ["React", "Node.js", "Express", "MongoDB"],
-    link: "#",
+    link: "https://drive.google.com/file/d/1-MkVpmlL1tz_p7EcJ_HFdnEKxcJbH6v0/view?usp=drivesdk ",
     github: "https://github.com/DEEKSHITHPATELLL/Food-donation-management-.git"
   },
   {
