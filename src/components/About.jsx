@@ -26,7 +26,7 @@ With a strong foundation in both software development and AI, I thrive on buildi
           </p>
           <div className="about-buttons">
             <Link to="/contact" className="about-button primary">Get in Touch</Link>
-            <a href="/resume.pdf" className="about-button secondary" download="My_Resume.pdf">
+            <a href="/DEEKSHITH_PATEL_LL_SIT_CSE_RESUME.pdf" className="about-button secondary" download="My_Resume.pdf">
   Download CV
 </a>
           </div>
